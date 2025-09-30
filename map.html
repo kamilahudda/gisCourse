@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of Nusa Putra</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Map of Cisaat</h1>
+    <div id="map" style="height: 500px"></div>
+    <script>
+        var map = L.map("map").setView([-6.9051179,106.8709278], 16);
+        var osm = L.tileLayer(
+            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        ).addTo(map);
+
+        fetch("map.geojson")
+            .then((res) => res.json())
+            .then((data) =>
+                L.geoJSON(data, {
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feture.properties.name);
+                    }
+                }).addTo(map)
+            );
+    </script>
+</body>
+</html>

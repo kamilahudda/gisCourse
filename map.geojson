@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Nusa Putra"
+      },
+      "geometry": {
+        "coordinates": [
+          106.87353660211926,
+          -6.90490768957325
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Masjid RI"
+      },
+      "geometry": {
+        "coordinates": [
+          106.87325715788677,
+          -6.905996717775295
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Kampus Area"
+      },
+      "geometry": {
+        "coordinates": [
+          106.87351478889042,
+          -6.905269118910752
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    }
+  ]
+}
